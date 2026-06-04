@@ -114,6 +114,9 @@ export const submitLoanApplication = async (application: LoanApplication): Promi
     const response = await axios.post<LoanWorkflowResponse>(loanWebhookUrl, payload, {
       timeout: 12000,
     });
+    console.log('RAW n8n response:', JSON.stringify(response.data));
+console.log('amount value:', response.data.amount);
+console.log('loanAmount value:', response.data.loanAmount);
      
     return mergeWorkflowAssessment(application, response.data);
   } catch {
