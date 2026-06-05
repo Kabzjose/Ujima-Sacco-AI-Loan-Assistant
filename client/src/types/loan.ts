@@ -24,7 +24,11 @@ export interface LoanAssessment {
   occupation: Occupation;
   county: County;
   loanAmount: number;
-  status: 'Approved for Tier-1 Review' | 'Escalated to Human Loan Officer' | 'Human Review Required' | 'Bias Safe';
+  status:  'Approved for Tier-1 Review'
+  | 'Escalated to Human Loan Officer'
+  | 'Human Review Required'
+  | 'Bias Safe'
+  | 'Approved — Our team will contact you shortly with next steps';
   riskScore: number;
   repaymentCapacity: string;
   seasonalIncomeAssessment: string;
